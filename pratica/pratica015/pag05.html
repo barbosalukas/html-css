@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            margin: auto;
+            padding: 10px;            
+        }
+
+        div > p {
+            display: none;
+        }
+
+        div:hover > p {
+            display: block;
+
+        }
+        a:hover {
+            color: greenyellow;
+            text-decoration: underline;
+        }
+        a:visited {
+            color: darkolivegreen;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:active {
+            color: green;
+        }
+
+        a::before {
+            content: '☞';
+            font-weight: normal;
+
+        }
+
+        a::after {
+            content: ' ☜';
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título principal</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ipsa similique repudiandae. Porro consequatur quaerat, voluptates non veniam quo alias sint, quidem reprehenderit iure vitae. Molestiae tenetur nihil at eaque?</p>
+    <div>
+        Passe o mouse aqui!!!
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero consectetur officia, quam rerum maxime reiciendis laborum nisi architecto molestiae neque adipisci pariatur impedit recusandae animi magni, quas laudantium repellendus harum.
+        </p>
+    </div>
+    <h2>Qual site estudar?</h2>
+    <p><a href="https://cursoemvideo.com">Curso em vídeo</a></p>
+</body>
+</html>

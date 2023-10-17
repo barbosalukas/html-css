@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+body {
+    background-image: linear-gradient(to right, #BCD7F7, #9FB5D1 );
+    background-attachment: fixed;
+    padding: 10px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    background-color: #515d6b;
+    color: #8294ab;
+}
+
+h1#principal {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.7em;
+    text-align: center;
+    text-shadow: 1px 1px 3px #ffffff;
+    color: #9FB5D1; 
+}
+
+h2 {
+    background-color: #515d6b;
+    color: #8294ab;
+   
+}
+
+.clas01 {
+    text-decoration: underline;
+
+}
+
+.clas02 {
+    color: white ;
+    text-decoration: underline white;
+}
+
+div > p {
+    display: none;
+}
+
+div:hover > p {
+    color: #515d6b;
+    display: block;
+    width: 300px;
+    
+}
+ div:hover {
+    color: #515d6b;
+ }
