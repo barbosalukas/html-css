@@ -1,12 +1,12 @@
 @charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
+
 * {
     padding: 0px;
     margin: 0px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Sriracha&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Alumni+Sans+Inline+One&display=swap');
 
 :root {
     ---cor01:#C1D6B8;
@@ -15,72 +15,78 @@
     ---cor04: #778572;
     ---cor05: #535C4F;
 
-    ---font-padrao: Arial, Helvetica, sans-serif;
-    ---font-destaque: 'Alumni Sans Inline One', sans-serif;
-    ---font-secundaria: 'Alumni Sans Collegiate One', sans-serif;
+    ---fonte-padrao: Arial, Helvetica, sans-serif;
+    ---fonte-destaque:'Alumni Sans Collegiate One', sans-serif;
+
+   
 }
 
-body, html {
-    background-image: linear-gradient(to bottom, var(---cor01), var(---cor04));
-    color: #403D38;
-}
-
-main {
-    background-color: var(---cor02);
-    
-    min-width: 300px;
-    max-width: 1000px;
-    padding: 20px;
-   margin: auto;
-
-
+body {
+    background-color: var(---cor01);
+    font-family: var(---fonte-padrao);
 }
 
 header {
-    background-color: var(---cor03);
+    
     text-align: center;
-    padding: 30px;
+    padding: 5px;
+    font-size: 1.8em;
+
+
 }
-header  h1 {
-    font-family: var(---font-destaque);
+
+header > h1 {
+    font-family: var(---fonte-destaque);
+    font-weight: normal;
+    font-size: 4em;
+}
+
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 15px;
+    margin:auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 5px;
+    
 }
 
 article > h1 {
-    text-align: var(---font-secundaria);
-    background-image: linear-gradient(to right, var(---cor05), transparent);
-    color: white;
-    font-size: 2em;
-}
-
-main h2 {
-    text-align: var(---font-secundaria);
-    background-image: linear-gradient(to right, var(---cor05), transparent);
-    color: white;
-    font-size: 1.3em;
-}
-
-main p {
-    text-align: justify;
-    font-family: var(---font-padrao);
+    color: var();
+    font-size: 1.9em;
+    background-image: linear-gradient(to right, var(---cor02), transparent);
     
 }
+
+article > h2 {
+    background-image: linear-gradient(to right, var(---cor02), transparent);
+}
+
+article > p {
+    text-align: justify;
+    line-height: 1.3em;
+    text-indent: 30px;
+}
+
 section {
-    background-color: var(---cor02);
-    padding: 20px;
-    border-radius: 10px;
+   padding: 10px;
+   background-color: var(---cor01);
+   border-radius: 10px;
+   margin: 12px;
+   
 }
 
 section > h3 {
-
-    text-align: var(---font-secundaria);
-    background-image: linear-gradient(to right, var(---cor05), transparent);
-    color: white;
-    font-size: 1.5em;
+    background-image: linear-gradient(to right, var(---cor02), transparent);
+   
+    font-size: 1.7em;
     
 }
 
-section, p {
-    color: black;
+section > p {
     text-align: justify;
+    line-height: 1.3em;
+    text-indent: 30px;
 }
 
