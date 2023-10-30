@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 * {
     padding: 0px;
     margin: 0px;
@@ -17,6 +19,7 @@
 
     ---fonte-padrao: Arial, Helvetica, sans-serif;
     ---fonte-destaque:'Alumni Sans Collegiate One', sans-serif;
+    ---fonte-secundaria: 'Roboto Slab', serif;
 
    
 }
@@ -36,13 +39,16 @@ header {
 }
 
 header > h1 {
+    font-variant: small-caps;
     font-family: var(---fonte-destaque);
     font-weight: normal;
     font-size: 4em;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.166);
 }
 
 main {
     background-color: white;
+   
     min-width: 300px;
     max-width: 1000px;
     padding: 15px;
@@ -52,14 +58,23 @@ main {
     
 }
 
+ h1, h2 {
+    font-family: var(---fonte-secundaria);
+    font-weight: 900;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.289);
+  
+}
+
 article > h1 {
     color: var();
     font-size: 1.9em;
     background-image: linear-gradient(to right, var(---cor02), transparent);
     
+    
 }
 
 article > h2 {
+
     background-image: linear-gradient(to right, var(---cor02), transparent);
 }
 
@@ -79,7 +94,7 @@ section {
 
 section > h3 {
     background-image: linear-gradient(to right, var(---cor02), transparent);
-   
+    text-shadow: 1px 1px 0p rgba(0, 0, 0, 0.258);
     font-size: 1.7em;
     
 }
@@ -90,3 +105,55 @@ section > p {
     text-indent: 30px;
 }
 
+footer {
+    text-align: center;
+    font-weight: bolder;
+}
+
+button {
+    background-color: var(---cor03);
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+button, a {
+    text-decoration: none;
+    color: black;
+}
+
+button > a:hover {
+    text-decoration: underline;
+}
+
+section#foto {
+    background-image: url('../codigo.jpeg');
+   
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: inline-block;
+
+}
+
+.texto {
+    background-color: rgba(255, 255, 255, 0.423);
+   font-weight: bolder;
+   position: relative;
+   color: rgba(255, 255, 255, 0.677);
+   text-shadow: 2px 1px 1px black;   
+}
+.texto::before {
+    display: block;
+    position: absolute;
+    content: normal;
+    top: 50%;
+    left: 50%;
+    rotate: -2deg;
+    translate: -50% -50%;
+    width: 150%;
+    height: 125%;
+    background: white;
+}
