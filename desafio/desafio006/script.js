@@ -1,41 +1,30 @@
-var heightInput = document.getElementById("height");
-var weightInput = document.getElementById("weight");
-var resultDiv = document.getElementById ("result");
+function calculateBMI() {
+    let heightInput = document.querySelector("#height")
+    let weightInput = document.querySelector("#weight")
+    let resultDiv = document.querySelector("#result")
+    
+    let height = parseFloat(heightInput.value)
+    let weight = parseFloat(weightInput.value)
 
-var height = parseFloat(heightInput.value);
-var weight = parseFloat(weightInput.value);
+    if(isNaN(height) || isNaN(weight)) {
+        resultDiv.innerHTML = "Por favor, insira altura e peso válidos."
+    }
 
-if (isNaN(height) || isNaN(weight)) {
-    resultDiv.innerHTML = "Plase enter valid height and weight.";
-    return;
-}
+    let bmi = weight / ((height / 100) ** 2)
+    let category = ""
 
-var bmi = weight / ((height / 100) ** 2);
-var category = "";
+    if(bmi < 18.5) {
+        category = "Abaixo do Peso"
+    }else if (bmi < 25) {
+        category = "Peso Normal"
+        } else if (bmi < 30) {
+            category = "Sobrepeso"
+        }
+            else {
+                category = "Obesidade"
+            }
 
-if (bmi < 18.5) {
-    category = "Underweight";
-} else if (bmi < 25) {
-    category = "Normal weight";
-} else if (bmi < 30) {
-    categoru = "Overweight";
-} else {
-    category = "Obese";
-}
-
-resultDiv.innerHTML = "Your BMI is " + bmi.toFixed(2) + " ("+ category + " )";
-
-if (bmi < 18.5) {
-    category = "Underweight";
-} else if (bmi < 25) {
-    category = "Normal weight";
-} else if (bmi < 30) {
-    categoru = "Overweight";
-} else {
-    category = "Obese";
-}
-
-resultDiv.innerHTML = "Your BMI is " + bmi.toFixed(2) + " ("+ category + " )";
-
+            resultDiv.innerHTML = `Seu IMC é ${bmi.toFixed(2)}. Classificação: ${category}`
+    }
 
 
